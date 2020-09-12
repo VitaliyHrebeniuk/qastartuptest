@@ -1,0 +1,42 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+Написание Контрольно работы:)
+{% endblock %}
+
+{% block content %}
+    <h1>Написание Контрольно работы:)</h1>
+    <form method="post">
+        {% csrf_token %}
+            <h4>Имя Фамилия</h4>
+        <div>{{form.title}}</div>
+                <h4>Что такое HTML?</h4>
+        <div>{{form.task }}</div>
+                <h4>Что такое CSS?</h4>
+        <div>{{form.tagcss }}</div>
+                <h4>Как сделать Ненумерованный список в нумерованном?Написать тегами</h4>
+        <div>{{form.tagulol }}</div>
+                <h4>Какая разница между значениями margin 10px и margin 10px 10px в свойстве margin?</h4>
+        <div>{{form.tagmarginmargin }}</div>
+                <h4>Ссылки. Как задать адрес документа, на который следует перейти? Написать тегом</h4>
+        <div>{{form.tagssilka }}</div>
+                <h4>Какое свойство задает цвет заднего фона?</h4>
+        <div>{{form.tagbackground }}</div>
+                <h4>В каком регистре лучше писать HTML-код?</h4>
+        <div>{{form.tagregistr }}</div>
+                <h4>Как задать красный цвет для всех элементов, имеющих класс red?</h4>
+        <div>{{form.tagclassred }}</div>
+                <h4>Зачем нужнeн тег tr</h4>
+        <div>{{form.tagtr }}</div>
+                <h4>В чем разница между margin и padding?</h4>
+        <div>{{form.tagmarginpadding }}</div>
+                <h4>В чем разница между div и span?</h4>
+        <div>{{form.tagdivspan }}</div>
+                <h4>Как добавить картинку на страницу?написать тегом</h4>
+        <div>{{form.tagimage }}</div>
+                <h4></h4>
+        <button type="submit" class="btn btn-success">Отправить на проверку</button>
+        <span>{{ error }}</span>
+    </form>
+{% endblock %}
+
